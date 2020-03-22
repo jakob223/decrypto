@@ -28,6 +28,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/screenfull@4.0.0/dist/screenfull.min.js"></script>
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+
     <script src="decrypto.js"></script>
 
     <title>Decrypto</title>
@@ -111,13 +113,9 @@
           <div class="col-6">
             <div class="float-left">
             <div class="dropdown">              
-              <button class="btn btn-primary btn-lg dropdown-toggle my-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Code
+              <button class="btn btn-primary btn-lg my-3" type="button" onclick="generateCode()">
+                Generate code
               </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#codeModal" id="revealCodeButton" style:"display:none">Reveal code</a>
-                <a class="dropdown-item" href="#" onclick="generateCode()">Generate new code</a>
-              </div>
             </div>
           </div>
         </div>
@@ -144,6 +142,14 @@
       </div>
       <div class="modal-body">
         Do you want to start a new game?
+      </div>
+      <div class="modal-body">
+        <span class="horizontal">Room code (optional): <input id="roomCode" onKeyUp="this.value = this.value.toUpperCase();"></span>
+        <div class="horizontal"> <input type="radio" id="blue" name="team" value="blue">
+<label for="blue">Blue team</label><br>
+<span  class="gap"></span>
+<input type="radio" id="red" name="team" value="red">
+<label for="red">Red team</label><br></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal" id="newGameModalCancelButton">Cancel</button>

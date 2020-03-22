@@ -1,31 +1,39 @@
 html {
-	font-size: 12px;
+    font-size: 12px;
 }
 
 .button {
-	vertical-align:center;
+    vertical-align: center;
 }
 
 .cluenumber {
-	text-align: center;
-	font-weight: bold;
+    text-align: center;
+    font-weight: bold;
 }
 
 .cluebody {
-	text-align: center;
-	font-weight: bold;
-	font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 .modal-backdrop {
-	/* make background black for modals
+    /* make background black for modals
 	   (ideally would make it just for code reveals) */
-
-	opacity: 1.0 !important;
+    opacity: 1.0 !important;
 }
 
 .codebody {
-	text-align: center;
-	font-weight: bold;
-	font-size: 3em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.gap {
+    width: 20px;
 }
